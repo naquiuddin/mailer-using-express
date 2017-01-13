@@ -1,0 +1,15 @@
+<h3>Go to console and send your email.</h3>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reqwest/2.0.5/reqwest.js"></script>
+<script>
+	console.log("run this function: getStep3(yourEmail) to send us your email");
+	var getStep3 = function(email) {
+		console.log(email);
+		reqwest({
+		    url: '/sendemail/'+email,
+		    method: 'get',
+		    success: function(resp) {
+		    	console.log("We received notification and your email. Thanks");
+		    }
+		});
+	}
+</script>
